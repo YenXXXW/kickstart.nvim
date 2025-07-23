@@ -261,7 +261,19 @@ require('lazy').setup({
     },
   },
 
-  -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
+  {
+    'nvim-tree/nvim-web-devicons',
+    config = function()
+      require('nvim-web-devicons').set_icon {
+        proto = {
+          icon = '',
+          color = '#7d83c1',
+          name = 'Proto',
+        },
+      }
+    end,
+  },
+
   --
   -- This is often very useful to both group configuration, as well as handle
   -- lazy loading plugins that don't need to be loaded immediately at startup.
